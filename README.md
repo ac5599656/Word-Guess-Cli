@@ -11,9 +11,15 @@ Users have several tries before moving on to a new word.
 To get started with the app, go to index.js. Get into the terminal for index.js.
 Then type the command node index.js. The game will start.
 
-## URL
+## Screenshots
 
-The following link is a video demonstrating how to use liri.js.
+Screenshots are provided below for the Word-Guess-Cli.
+
+![](assets/images/screenshot1.png)
+
+![](assets/images/screenshot2.png)
+
+![](assets/images/screenshot3.png)
 
 ## More Info On Word-Guess-Cli
 

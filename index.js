@@ -36,7 +36,7 @@ function guessLetter() {
             newWord.checkTrue();
             guesses.push(input.letter);
             if (newWord.checkTrue() === true) {
-                console.log("hit")
+                console.log("You are ready for another word!")
                 reset();
             } else {
                 guessLetter();
@@ -50,7 +50,7 @@ function guessLetter() {
             newWord.getWord();
             newWord.checkTrue();
             tries--
-            console.log(tries);
+            console.log(`${tries} chances`);
             if (tries === 0) {
                 console.log("Sorry,better luck next time!")
                 reset();
