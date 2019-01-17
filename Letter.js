@@ -1,11 +1,10 @@
+//Class constructor
 class Letter {
     constructor(underlyingLetter) {
-        this.underlyingLetter = underlyingLetter;
-        this.availableLetter = false;
-        // this.result = this.result.bind(this);
-        // this.checkAvailable = this.checkAvailable.bind(this);
+        this.underlyingLetter = underlyingLetter; //Equals to a letter part of the word.  //
+        this.availableLetter = false; //Tells if the letter is in the word.  By default, it set to false.
     }
-    result() {
+    result() { //result function that prints a string of word and underscore
         if (this.availableLetter) {
             return this.underlyingLetter;
         } else {
@@ -13,7 +12,7 @@ class Letter {
         }
 
     }
-    checkAvailable(guessedLetter) {
+    checkAvailable(guessedLetter) { //checkAvailable function determines if the letter is in the word
         // console.log("USER GUESS LETTER", guessedLetter);
         // console.log("UNDERLYING", this.underlyingLetter)
         if (guessedLetter === this.underlyingLetter || this.availableLetter === true) {
