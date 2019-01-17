@@ -6,9 +6,8 @@
 
 const inquirer = require('inquirer');
 const Word = require("./Word.js");
-let wordList = ["hello", "jump"];
+let wordList = ["hello", "jump", "drizzle", "lit"];
 let someWord = wordList[Math.floor(Math.random() * wordList.length)];
-console.log(someWord);
 let newWord = new Word(someWord);
 let tries = someWord.length;
 let guesses = [];
@@ -19,7 +18,6 @@ function reset() {
     guesses = [];
     tries = someWord.length;
     newWord = new Word(someWord);
-    console.log(someWord);
     guessLetter();
 }
 
@@ -36,7 +34,6 @@ function guessLetter() {
             newWord.isLetter(input.letter);
             newWord.getWord();
             newWord.checkTrue();
-            console.log(tries);
             guesses.push(input.letter);
             if (newWord.checkTrue() === true) {
                 console.log("hit")
@@ -53,6 +50,7 @@ function guessLetter() {
             newWord.getWord();
             newWord.checkTrue();
             tries--
+            console.log(tries);
             if (tries === 0) {
                 console.log("Sorry,better luck next time!")
                 reset();
@@ -62,6 +60,7 @@ function guessLetter() {
         } else {
             console.log("You guessed the same letter")
             newWord.getWord();
+            guessLetter();
         }
 
     })
