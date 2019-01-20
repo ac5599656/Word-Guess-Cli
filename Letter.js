@@ -13,9 +13,9 @@ class Letter {
 
     }
     checkAvailable(guessedLetter) { //checkAvailable function determines if the letter is in the word
-        // console.log("USER GUESS LETTER", guessedLetter);
-        // console.log("UNDERLYING", this.underlyingLetter)
-        if (guessedLetter === this.underlyingLetter || this.availableLetter === true) {
+        console.log("USER GUESS LETTER", guessedLetter);
+        console.log("UNDERLYING", this.underlyingLetter)
+        if (guessedLetter === this.underlyingLetter.toLowerCase() || this.availableLetter === true) {
             this.availableLetter = true;
         } else {
             this.availableLetter = false;

@@ -38,10 +38,11 @@ function guessLetter() {
         message: "Guess a letter?",
 
     }]).then((input) => {
+        let guess = input.letter.toLowerCase();
         //Action taken when the user's input fits the condition where the user input is not in the guess array but it is a letter in the word
-        if (guesses.indexOf(input.letter) === -1 && someWord.split("").indexOf(input.letter) >= 0) {
+        if (guesses.indexOf(guess) === -1 && someWord.split("").indexOf(guess) >= 0) {
             console.log("CORRECT!!");
-            newWord.isLetter(input.letter);
+            newWord.isLetter(guess);
             newWord.getWord();
             newWord.checkTrue();
             guesses.push(input.letter);
@@ -52,10 +53,10 @@ function guessLetter() {
             } else {
                 guessLetter();
             } //Action taken when the user's input fits the condition where the user input is not in the guess array and not part of the word.
-        } else if (guesses.indexOf(input.letter) == -1 && someWord.split("").indexOf(input.letter) === -1) {
+        } else if (guesses.indexOf(guess) == -1 && someWord.split("").indexOf(guess) === -1) {
             console.log("INCORRECT!!!");
             guesses.push(input.letter);
-            newWord.isLetter(input.letter);
+            newWord.isLetter(guess);
             newWord.getWord();
             newWord.checkTrue();
             tries--
